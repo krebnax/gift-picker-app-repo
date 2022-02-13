@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Your Gift!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-title>{{ gift.name }}  ({{gift.price}} GBP)</ion-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label class="ion-text-wrap">{{ gift.description }}</ion-label>
+    </ion-card-content>
+  </ion-card>
+  <ion-button (click)="onExit()" class="ion-margin-vertical ion-margin-horizontal">Finish</ion-button>
+</ion-content>

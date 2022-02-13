@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Friend Details</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="onDelete(currentFriend.id)"><ion-icon name="trash" slot="icon-only"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        {{ currentFriend.firstName }} {{ currentFriend.lastName}}
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-button (click)="onGotoSurvey()">
+        <span *ngIf="currentFriend.hasGift">Restart Survey</span>
+        <span *ngIf="!currentFriend.hasGift">Start Survey</span>
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
